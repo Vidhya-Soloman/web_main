@@ -1,0 +1,44 @@
+<html>
+<head>
+<body>
+Enter your name<input id="name"></input><br><br>
+<button type="button" onclick="length()">Length</button>
+<p id="p"></p>
+Old:<input id="old"></input>
+New:<input id="new"></input>
+<button type="button" onclick="replace()">Replace</button>
+<p id="r"></p>
+<button type="button" onclick="lower()">Lower</button>
+<p id="l"></p>
+<button type="button" onclick="upper()">Upper</button>
+<p id="u"></p>
+
+<script>
+function length()
+{
+let txt=document.getElementById('name').value;
+let len=txt.length;
+document.getElementById('p').innerHTML="Length is:"+len;
+}
+function replace()
+{
+let x=document.getElementById('old').value;
+let t=document.getElementById('new').value;
+let re=t.replace('x','t');
+document.getElementById('r').innerHTML="Replaced :"+re;
+}
+function lower()
+{
+let n=document.getElementById('name').value;
+let l=n.toLowerCase();
+document.getElementById('l').innerHTML="UpperCase:"+l;
+}
+function upper()
+{
+let n=document.getElementById('name').value;
+let u=n.toUpperCase();
+document.getElementById('u').innerHTML="LowerCase:"+u;
+}
+</script>
+</body>
+</html>
