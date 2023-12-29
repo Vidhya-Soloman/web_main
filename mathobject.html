@@ -1,0 +1,61 @@
+<!--JAVASCRIPT-->
+<!--MATH OBJECT-->
+
+<html>
+<head>
+</head>
+<body>
+<form method="post">
+Floating Point Number:<input id="float"></input><br>
+<button type="button" onclick="round()">Round</button>
+<p id="r"></p>
+<button type="button" onclick="square()">Square Root</button>
+<p id="s"></p>
+<button type="button" onclick="ceil()">Ceil</button>
+<p id="c"></p>
+<button type="button" onclick="floor()">Floor</button>
+<p id="f"></p>
+<button type="button" onclick="absolute()">Absolute</button>
+<p id="a"></p>
+
+<!--DEFINING FUNCTIONS-->
+
+<script>
+function round()
+{
+let n=document.getElementById('float').value;
+let res=Math.round(n);
+document.getElementById("r").innerHTML="Rounded Value:"+res;
+}
+
+function square()
+{
+let n=document.getElementById('float').value;
+let res=Math.sqrt(n);
+document.getElementById("s").innerHTML="Square Root:"+res;
+}
+
+function ceil()
+{
+let n=document.getElementById('float').value;
+let res=Math.ceil(n);
+document.getElementById("c").innerHTML="Ceil:"+res;
+}
+
+function floor()
+{
+let n=document.getElementById('float').value;
+let res=Math.ceil(n);
+document.getElementById("f").innerHTML="Floor:"+res;
+}
+
+function absolute()
+{
+let n=document.getElementById('float').value;
+let res=Math.abs(n);
+document.getElementById("a").innerHTML="Absolute:"+res;
+}
+</script>
+</form>
+</body>
+</html>
