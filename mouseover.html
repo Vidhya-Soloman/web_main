@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<img  id="img" onmouseover="lighton()" onmouseout="lightoff()" src="file:///C:/Users/Vidhiya/OneDrive/Desktop/web/light-bulb(1).png">
+<h1 id="h">BULB OFF</h1>
+<script>
+
+
+function lighton()
+{
+document.getElementById('img').src='file:///C:/Users/Vidhiya/OneDrive/Desktop/web/light-bulb.png';
+document.getElementById('h').innerHTML="BULB ON";
+}
+
+function lightoff()
+{
+document.getElementById('img').src='file:///C:/Users/Vidhiya/OneDrive/Desktop/web/light-bulb(1).png';
+document.getElementById('h').innerHTML="BULB OFF";
+}
+</script>
+</body>
+</html>
