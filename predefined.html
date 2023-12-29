@@ -1,3 +1,5 @@
+<!--JAVASCRIPT PREDEFINED FUNCTIONS-->
+
 <html>
 <head>
 <body>
@@ -12,7 +14,13 @@ New:<input id="new"></input>
 <p id="l"></p>
 <button type="button" onclick="upper()">Upper</button>
 <p id="u"></p>
+First name<input id="fname"></input>
+Last name<input id="lname"></input>
+<button type="button" onclick="concatenate()">Concatenate</button>
+<p id="v"></p>
+<p id="demo"></p>
 
+<!--FUNCTIONS-->
 <script>
 function length()
 {
@@ -20,6 +28,7 @@ let txt=document.getElementById('name').value;
 let len=txt.length;
 document.getElementById('p').innerHTML="Length is:"+len;
 }
+
 function replace()
 {
 let x=document.getElementById('old').value;
@@ -27,17 +36,27 @@ let t=document.getElementById('new').value;
 let re=t.replace('x','t');
 document.getElementById('r').innerHTML="Replaced :"+re;
 }
+
 function lower()
 {
 let n=document.getElementById('name').value;
 let l=n.toLowerCase();
 document.getElementById('l').innerHTML="UpperCase:"+l;
 }
+
 function upper()
 {
 let n=document.getElementById('name').value;
 let u=n.toUpperCase();
 document.getElementById('u').innerHTML="LowerCase:"+u;
+}
+
+function concatenate()
+{
+let f=document.getElementById('fname').value;
+let la=document.getElementById('lname').value;
+let c=f.concat(la);
+document.getElementById('v').innerHTML=c;
 }
 </script>
 </body>
