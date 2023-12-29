@@ -1,0 +1,60 @@
+<!--FORM VALIDATION-->
+<!--JAVASCRIPT-->
+
+<html>
+<head>
+<title>student registration</title>
+<script>
+function validate()
+{
+var ktuid=document.getElementById('ktuid').value;
+        if(ktuid.startsWith('TVE')==false || ktuid.length !=12 )
+        {
+alert("invalid ktuid");
+}
+var name=document.getElementById("name").value;
+if(name=="")
+{
+alert("Name field shouldn't be blank");
+}
+
+var email=document.getElementById("email").value;
+var reg=/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)?$/;
+var result=reg.test(email);
+if(result==false)
+{
+alert("invalid email");
+}
+
+var number=document.getElementById("phone").value;
+if(number.length>10 || number.length<10 || isNaN(number))
+{
+alert("Invalid phone number");
+}
+}
+</script>
+</head>
+<body>
+<form name="myform" method="post" action="" onsubmit="return validate()">
+<div style=background-color:#e8d290>
+<h2 align="center"><i>STUDENT REGISTRATION</i></h2><br>
+</div><br><br>
+<table border="1" align="center">
+<th>Ktu id</th>
+<td><input type="textbox" name="ktuid" id="ktuid"></input></td></tr>
+<tr>
+<th>Name</th>
+<td><input type="textbox" name="name" id="name"></input></td></tr>
+<tr>
+<th>Email id</th>
+<td><input type="textbox" name="email" id="email"></input></td></tr>
+<tr><th>Phone No</th>
+<td><input type="textbox" name="phone" id="phone"></input></td></tr>
+<tr><th>Password</th>
+<td><input type="password" name="password"></input></td></tr>
+<tr><th>Re-type Password</th>
+<td><input type="password" name="repassword"></input></td></tr>
+<tr><td colspan="2" align="center"><input type="submit" name="submit" value="submit" style=background-color:lightgreen></input>
+<input type="reset" name="reset" style=background-color:skyblue></input></td></tr>
+</body>
+</html>
